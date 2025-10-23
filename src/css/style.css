@@ -1,0 +1,44 @@
+.company-header {
+  background-color: var(--color-bg-main);
+
+  & .header-banner {
+    position: relative;
+    height: 15rem;
+    background-image: url(../img/hadder_img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & .logo {
+      width: 10rem;
+      height: 10rem;
+      position: absolute;
+      bottom: calc(-5rem);
+      left: calc(50% - 5rem);
+      overflow: hidden;
+      border-radius: 50%;
+      border: 5px solid var(--color-button-border);
+
+      & img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.food-category {
+  margin-bottom: var(--mg-l);
+  background-color: var(--color-bg-main);
+
+  & h2 {
+    margin-top: var(--mg-l);
+  }
+
+  & img {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

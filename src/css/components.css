@@ -1,0 +1,69 @@
+.reviews {
+  color: var(--color-bg-header-footer);
+}
+
+.categories {
+  display: flex;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+
+  & .categorie-button {
+    background-color: var(--color-button-categorie);
+    border-radius: 1rem;
+    margin: var(--mg-m) var(--mg-m) var(--mg-m) 0;
+
+    color: var(--color-fonts-secondary);
+
+    &:hover {
+      background-color: var(--color-button-categorie-hover);
+      scale: 1.1;
+    }
+
+    &:focus-visible {
+      background-color: var(--color-button-categorie-hover);
+      scale: 1.1;
+    }
+  }
+}
+
+.food-card {
+  position: relative;
+  border: 1px solid var(--color-button-border);
+  border-radius: 1rem;
+  margin-bottom: var(--mg-m);
+  padding: var(--pd-l);
+
+  & .topping {
+    margin: var(--mg-m) 0;
+  }
+
+  & .price {
+    color: var(--color-fonts-price);
+    font-weight: bold;
+  }
+
+  & .add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: var(--pd-l);
+    background-color: transparent;
+    border-radius: 5px;
+    border: none;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid var(--color-button-border);
+
+    &:hover {
+      background-color: var(--color-button);
+      color: var(--color-fonts-secondary);
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+  }
+}
