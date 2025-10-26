@@ -15,9 +15,11 @@
     <link rel="stylesheet" href="src/css/style.css" />
 
     <!-- Embedding JavaScript -->
+    <script src="src/js/db.js" defer></script>
+    <script src="src/js/template.js" defer></script>
     <script src="src/js/script.js" defer></script>
   </head>
-  <body>
+  <body onload="renderPage()">
     <header>
       <nav class="container" aria-label="Hauptnavigation">
         <img src="src/icon/Logo.png" alt="Logo von Bestellapp.de" />
@@ -26,38 +28,33 @@
 
     <main>
       <div class="page-container">
-        <section class="menu">
-          <header class="company-header">
-            <div class="header-banner">
-              <img src="src/img/hadder_img.jpg" alt="Bild einer Pizza" />
-              <div class="logo">
-                <img src="src/icon/Pizza_Logo.png" alt="Logo von Pizza ABC" />
-              </div>
+        <header class="company-header">
+          <div class="header-banner">
+            <img src="src/img/hadder_img.jpg" alt="Bild einer Pizza" />
+            <div class="logo">
+              <img src="src/icon/Pizza_Logo.png" alt="Logo von Pizza ABC" />
             </div>
-            <div class="container">
-              <h1 class="company-name">Slice of Heaven</h1>
-              <div class="reviews">
-                <h4>Bewertung (4,2 von 5 Sternen)</h4>
-              </div>
-              <div class="categories" aria-labelledby="categorie-button">
-                <button
-                  type="button"
-                  class="categorie-button"
-                  aria-label="Button für die Kategorie Pizza"
-                >
-                  Pizza
-                </button>
-              </div>
+          </div>
+          <div class="container">
+            <h1 class="company-name">Slice of Heaven</h1>
+            <div class="reviews">
+              <h4>Bewertung (4,2 von 5 Sternen)</h4>
             </div>
-          </header>
-        </section>
+            <div class="categories" aria-labelledby="categorie-button">
+              <button
+                type="button"
+                class="categorie-button"
+                aria-label="Button für die Kategorie Pizza"
+              >
+                Pizza
+              </button>
+            </div>
+          </div>
+        </header>
 
         <section class="food-category">
           <header class="food-category">
-            <img
-              src="src/img/food_category-img.jpg"
-              alt="Bild der Kategorie Pizza"
-            />
+            <img src="" alt="Bild der Kategorie Pizza" />
             <div class="container">
               <h2>Pizza</h2>
             </div>
@@ -79,7 +76,7 @@
         </section>
       </div>
 
-      <section class="cart">
+      <!-- <section class="cart">
         <h2>Warenkorb</h2>
         <div class="cart-list">
           <div class="article">
@@ -110,318 +107,6 @@
               </button>
             </div>
           </div>
-          <!-- --------------------------- -->
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <div class="article">
-            <h3>Pizza Salami</h3>
-            <div class="amount-container">
-              <button
-                class="add"
-                type="button"
-                aria-label="Artikel dieser Art hinzufügen"
-              >
-                +
-              </button>
-              <span class="amount">12x</span>
-              <button
-                class="remove"
-                type="button"
-                aria-label="Artikel dieser Art entfernen"
-              >
-                -
-              </button>
-              <span class="sum">115,50€</span>
-              <button
-                class="delete"
-                type="button"
-                aria-label="Alle Artikel dieser art löschen "
-              >
-                x
-              </button>
-            </div>
-            <!-- ----------------------- -->
-
-            <!-- ------------------------- -->
-          </div>
-          <!-- ------------------------------ -->
         </div>
         <div class="sum-area">
           <table>
@@ -445,7 +130,7 @@
             Jetzt Bestellen
           </button>
         </div>
-      </section>
+      </section> -->
     </main>
 
     <footer>

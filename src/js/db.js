@@ -1,0 +1,143 @@
+const company = {
+  "name": "Slice of Heaven",
+  "rating": 4.8,
+  "headder_img": "hadder_img.jpg",
+  "icon": "Pizza_Logo.png",
+  "menu": [
+    {
+      "category": "Pizza",
+      "food_category_img": "food_category_pizza.jpg",
+      "items": [
+        {
+          "name": "Margherita",
+          "description": "Tomatensauce, Mozzarella, Basilikum",
+          "price": 8.5,
+        },
+        {
+          "name": "Salami",
+          "description": "Tomatensauce, Mozzarella, Salami",
+          "price": 9.5,
+        },
+        {
+          "name": "Funghi",
+          "description": "Tomatensauce, Mozzarella, Champignons",
+          "price": 9.0,
+        },
+        {
+          "name": "Prosciutto",
+          "description": "Tomatensauce, Mozzarella, Schinken",
+          "price": 9.5,
+        },
+        {
+          "name": "Diavolo",
+          "description": "Tomatensauce, Mozzarella, Peperoni, Salami",
+          "price": 10.0,
+        },
+      ],
+    },
+    {
+      "category": "Pasta",
+      "food_category_img": "food_category_pasta.jpg",
+      "items": [
+        {
+          "name": "Spaghetti Carbonara",
+          "description": "Speck, Ei, Parmesan, Sahnesauce",
+          "price": 10.0,
+        },
+        {
+          "name": "Penne Arrabbiata",
+          "description": "Tomatensauce, Chili, Knoblauch",
+          "price": 9.0,
+        },
+        {
+          "name": "Tagliatelle al Pesto",
+          "description": "Basilikumpesto, Pinienkerne, Parmesan",
+          "price": 10.5,
+        },
+        {
+          "name": "Lasagne",
+          "description": "Rinderhack, Tomatensauce, Béchamel",
+          "price": 11.0,
+        },
+        {
+          "name": "Tortellini Ricotta",
+          "description": "Ricottafüllung, Tomatensauce",
+          "price": 10.0,
+        },
+      ],
+    },
+    {
+      "category": "Salate",
+      "food_category_img": "food_category_salat.jpg",
+      "items": [
+        {
+          "name": "Insalata Mista",
+          "description": "Gemischter Salat, Balsamico-Dressing",
+          "price": 7.0,
+        },
+        {
+          "name": "Caesar Salad",
+          "description": "Römersalat, Croutons, Caesar-Dressing",
+          "price": 8.5,
+        },
+        {
+          "name": "Caprese",
+          "description": "Tomaten, Mozzarella, Basilikum",
+          "price": 8.0,
+        },
+        {
+          "name": "Rucola Parmigiano",
+          "description": "Rucola, Parmesan, Balsamico",
+          "price": 8.5,
+        },
+        {
+          "name": "Thunfischsalat",
+          "description": "Gemischter Salat, Thunfisch, Zwiebeln",
+          "price": 9.0,
+        },
+      ],
+    },
+    {
+      "category": "Desserts",
+      "food_category_img": "food_category_dessert.jpg",
+      "items": [
+        {
+          "name": "Tiramisu",
+          "description": "Klassisches italienisches Dessert",
+          "price": 5.0,
+        },
+        {
+          "name": "Panna Cotta",
+          "description": "Sahnepudding mit Beerensauce",
+          "price": 5.0,
+        },
+        {
+          "name": "Gelato",
+          "description": "2 Kugeln italienisches Eis",
+          "price": 4.0,
+        },
+        { "name": "Zabaione", "description": "Weinschaumcreme", "price": 5.5 },
+        {
+          "name": "Obstsalat",
+          "description": "Frische Früchte der Saison",
+          "price": 4.5,
+        },
+      ],
+    },
+    {
+      "category": "Getränke",
+      "food_category_img": "food_category_getränke.jpg",
+      "items": [
+        { "name": "Cola", "description": "0,33l Flasche", "price": 2.5 },
+        { "name": "Fanta", "description": "0,33l Flasche", "price": 2.5 },
+        {
+          "name": "Wasser",
+          "description": "0,5l Flasche, still",
+          "price": 2.0,
+        },
+        { "name": "Apfelschorle", "description": "0,5l Flasche", "price": 2.5 },
+        { "name": "Bier", "description": "0,5l Flasche, Pils", "price": 3.0 },
+      ],
+    },
+  ],
+};
