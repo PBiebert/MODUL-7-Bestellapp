@@ -22,7 +22,7 @@ function templateCompanyHeader() {
 
 function templateCategory(i) {
   return `
-      <a href="#category-${company.menu[i].category}">
+      <a href="#category-${company.menu[i].category}" tabindex="-1">
         <button type="button" class="categorie-button" aria-label="Button für die Kategorie ${company.menu[i].category}">
           
             ${company.menu[i].category}
@@ -118,6 +118,6 @@ function templateSumArea() {
 
 function defaultCart() {
   return `
-  <p class ='defaultCart'>Füge einen Artikel hinzu</p>
+  <p class ='defaultCart'>Mindestbestellwert : ${company.minimum_order_value.toFixed(2).replace(".", ",")} €</p>
   `;
 }

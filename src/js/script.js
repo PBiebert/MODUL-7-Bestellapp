@@ -135,7 +135,7 @@ function checkIfItemInCart() {
   let button = document.querySelector(".order-now");
   let cartList = document.querySelector(".cart-list");
 
-  if (cartSubCosts == 0) {
+  if (cartSubCosts <= company.minimum_order_value) {
     button.disabled = true;
     cartList.innerHTML = defaultCart();
   } else {
