@@ -15,7 +15,6 @@ function renderPage() {
   createFoodCategoryContainer();
   renderCategorys();
   renderSumArea();
-  checkIfItemInCart();
 }
 
 function clearPageContainer() {
@@ -65,7 +64,6 @@ function renderCart() {
     cartList.innerHTML += templateCartArticle(i);
   }
   calcCosts();
-  checkIfItemInCart();
 }
 
 function addItemToCart(id) {
@@ -129,20 +127,4 @@ function calcCosts() {
   }
   totalCosts = cartSubCosts + company.delivery_costs;
   renderSumArea();
-}
-
-function checkIfItemInCart() {
-  let button = document.querySelector(".order-now");
-  let cartList = document.querySelector(".cart-list");
-
-  if (cartSubCosts == 0) {
-    button.disabled = true;
-    cartList.innerHTML = defaultCart();
-  } else {
-    button.disabled = false;
-  }
-}
-
-function klick() {
-  console.log("geht");
 }

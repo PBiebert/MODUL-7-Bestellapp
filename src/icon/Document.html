@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="de"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!-- Embdedding Favicon -->
+    
+
+    <!-- Embedding CSS -->
+    
+    
+    
+
+    <!-- Embedding JavaScript -->
+    <script src="./Document_files/db.js.Download" defer=""></script>
+    <script src="./Document_files/template.js.Download" defer=""></script>
+    <script src="./Document_files/script.js.Download" defer=""></script>
+  <link rel="icon" type="image/ico" href="http://127.0.0.1:5500/src/favicon/favicon.ico"><link rel="stylesheet" href="./Document_files/base.css"><link rel="stylesheet" href="./Document_files/components.css"><link rel="stylesheet" href="./Document_files/style.css"></head>
+  <body onload="renderPage()">
+    <header>
+      <nav class="container" aria-label="Hauptnavigation">
+        <img src="./Document_files/Logo.png" alt="Logo von Bestellapp.de">
+      </nav>
+    </header>
+
+    <main>
+      <div class="page-container">
+        <header class="company-header">
+          <div class="header-banner">
+            <img src="./Document_files/hadder_img.jpg" alt="Bild einer Pizza">
+            <div class="logo">
+              <img src="./Document_files/Pizza_Logo.png" alt="Logo von Pizza ABC">
+            </div>
+          </div>
+
+          <div class="container">
+            <h1 class="company-name">Slice of Heaven</h1>
+            <div class="reviews">
+              <p class="rating">Bewertung (4,8 von 5 Sternen)</p>
+            </div>
+                <div class="categories" aria-labelledby="categorie-button">
+        <button type="button" class="categorie-button" aria-label="Button für die Kategorie Pizza">
+            Pizza
+        </button>
+
+        <button type="button" class="categorie-button" aria-label="Button für die Kategorie Pasta">
+            Pasta
+        </button>
+
+        <button type="button" class="categorie-button" aria-label="Button für die Kategorie Salate">
+            Salate
+        </button>
+
+        <button type="button" class="categorie-button" aria-label="Button für die Kategorie Desserts">
+            Desserts
+        </button>
+
+        <button type="button" class="categorie-button" aria-label="Button für die Kategorie Getränke">
+            Getränke
+        </button>
+</div> 
+          </div>
+        </header>
+    
+    <section class="food-category-container">
+
+    
+    <section class="food-category">
+        <header class="food-category">
+        <img src="./Document_files/food_category_pizza.jpg" alt="Bild der Kategorie Pizza">  
+        <div class="container">
+            <h2>Pizza</h2>
+        </div>
+        </header>
+
+        <section class="food-list container" id="Pizza">
+        
+    <div class="food-card">
+        <h3 class="name" id="0_0">
+        Margherita
+        </h3>
+        <p class="topping">Tomatensauce, Mozzarella, Basilikum</p>
+        <p class="price">8,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;0_0&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="0_1">
+        Salami
+        </h3>
+        <p class="topping">Tomatensauce, Mozzarella, Salami</p>
+        <p class="price">9,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;0_1&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="0_2">
+        Funghi
+        </h3>
+        <p class="topping">Tomatensauce, Mozzarella, Champignons</p>
+        <p class="price">9,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;0_2&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="0_3">
+        Prosciutto
+        </h3>
+        <p class="topping">Tomatensauce, Mozzarella, Schinken</p>
+        <p class="price">9,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;0_3&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="0_4">
+        Diavolo
+        </h3>
+        <p class="topping">Tomatensauce, Mozzarella, Peperoni, Salami</p>
+        <p class="price">10,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;0_4&#39;)">
+        <p>+</p>
+        </button>
+    </div></section>
+    </section>; 
+    <section class="food-category">
+        <header class="food-category">
+        <img src="./Document_files/food_category_pasta.jpg" alt="Bild der Kategorie Pasta">  
+        <div class="container">
+            <h2>Pasta</h2>
+        </div>
+        </header>
+
+        <section class="food-list container" id="Pasta">
+        
+    <div class="food-card">
+        <h3 class="name" id="1_0">
+        Spaghetti Carbonara
+        </h3>
+        <p class="topping">Speck, Ei, Parmesan, Sahnesauce</p>
+        <p class="price">10,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;1_0&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="1_1">
+        Penne Arrabbiata
+        </h3>
+        <p class="topping">Tomatensauce, Chili, Knoblauch</p>
+        <p class="price">9,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;1_1&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="1_2">
+        Tagliatelle al Pesto
+        </h3>
+        <p class="topping">Basilikumpesto, Pinienkerne, Parmesan</p>
+        <p class="price">10,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;1_2&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="1_3">
+        Lasagne
+        </h3>
+        <p class="topping">Rinderhack, Tomatensauce, Béchamel</p>
+        <p class="price">11,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;1_3&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="1_4">
+        Tortellini Ricotta
+        </h3>
+        <p class="topping">Ricottafüllung, Tomatensauce</p>
+        <p class="price">10,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;1_4&#39;)">
+        <p>+</p>
+        </button>
+    </div></section>
+    </section>; 
+    <section class="food-category">
+        <header class="food-category">
+        <img src="./Document_files/food_category_salat.jpg" alt="Bild der Kategorie Salate">  
+        <div class="container">
+            <h2>Salate</h2>
+        </div>
+        </header>
+
+        <section class="food-list container" id="Salate">
+        
+    <div class="food-card">
+        <h3 class="name" id="2_0">
+        Insalata Mista
+        </h3>
+        <p class="topping">Gemischter Salat, Balsamico-Dressing</p>
+        <p class="price">7,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;2_0&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="2_1">
+        Caesar Salad
+        </h3>
+        <p class="topping">Römersalat, Croutons, Caesar-Dressing</p>
+        <p class="price">8,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;2_1&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="2_2">
+        Caprese
+        </h3>
+        <p class="topping">Tomaten, Mozzarella, Basilikum</p>
+        <p class="price">8,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;2_2&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="2_3">
+        Rucola Parmigiano
+        </h3>
+        <p class="topping">Rucola, Parmesan, Balsamico</p>
+        <p class="price">8,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;2_3&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="2_4">
+        Thunfischsalat
+        </h3>
+        <p class="topping">Gemischter Salat, Thunfisch, Zwiebeln</p>
+        <p class="price">9,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;2_4&#39;)">
+        <p>+</p>
+        </button>
+    </div></section>
+    </section>; 
+    <section class="food-category">
+        <header class="food-category">
+        <img src="./Document_files/food_category_dessert.jpg" alt="Bild der Kategorie Desserts">  
+        <div class="container">
+            <h2>Desserts</h2>
+        </div>
+        </header>
+
+        <section class="food-list container" id="Desserts">
+        
+    <div class="food-card">
+        <h3 class="name" id="3_0">
+        Tiramisu
+        </h3>
+        <p class="topping">Klassisches italienisches Dessert</p>
+        <p class="price">5,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;3_0&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="3_1">
+        Panna Cotta
+        </h3>
+        <p class="topping">Sahnepudding mit Beerensauce</p>
+        <p class="price">5,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;3_1&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="3_2">
+        Gelato
+        </h3>
+        <p class="topping">2 Kugeln italienisches Eis</p>
+        <p class="price">4,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;3_2&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="3_3">
+        Zabaione
+        </h3>
+        <p class="topping">Weinschaumcreme</p>
+        <p class="price">5,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;3_3&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="3_4">
+        Obstsalat
+        </h3>
+        <p class="topping">Frische Früchte der Saison</p>
+        <p class="price">4,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;3_4&#39;)">
+        <p>+</p>
+        </button>
+    </div></section>
+    </section>; 
+    <section class="food-category">
+        <header class="food-category">
+        <img src="./Document_files/food_category_getränke.jpg" alt="Bild der Kategorie Getränke">  
+        <div class="container">
+            <h2>Getränke</h2>
+        </div>
+        </header>
+
+        <section class="food-list container" id="Getränke">
+        
+    <div class="food-card">
+        <h3 class="name" id="4_0">
+        Cola
+        </h3>
+        <p class="topping">0,33l Flasche</p>
+        <p class="price">2,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;4_0&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="4_1">
+        Fanta
+        </h3>
+        <p class="topping">0,33l Flasche</p>
+        <p class="price">2,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;4_1&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="4_2">
+        Wasser
+        </h3>
+        <p class="topping">0,5l Flasche, still</p>
+        <p class="price">2,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;4_2&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="4_3">
+        Apfelschorle
+        </h3>
+        <p class="topping">0,5l Flasche</p>
+        <p class="price">2,50 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;4_3&#39;)">
+        <p>+</p>
+        </button>
+    </div>
+    <div class="food-card">
+        <h3 class="name" id="4_4">
+        Bier
+        </h3>
+        <p class="topping">0,5l Flasche, Pils</p>
+        <p class="price">3,00 €</p>
+        <button type="button" class="add-button" aria-label="Artikel zum Warenkorb hinzufügen" onclick="addItemToCart(&#39;4_4&#39;)">
+        <p>+</p>
+        </button>
+    </div></section>
+    </section>; </section>; </div>
+
+      <section class="cart">
+        <h2>Warenkorb</h2>
+        <div class="cart-list"></div>
+        <div class="sum-area">
+          <button class="order-now" type="button" aria-label="Jetzt Bestellen" disable="true">Jetzt Bestellen</button><table>
+            <tbody>
+              <tr>
+                <td class="col-1">Zwischensumme:</td>
+                <td class="col-2" id="subtotal">0,00 €</td>
+              </tr>
+              <tr>
+                <td class="col-1">Lieferkosten:</td>
+                <td class="col-2" id="delivery-costs">2,00 €</td>
+              </tr>
+              <tr>
+                <th class="col-1">Gesamt:</th>
+                <th class="col-2" id="total">2,00 €</th>
+              </tr>
+            </tbody>
+
+            
+          </table></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-container">
+        <p>Created by</p>
+        <p class="created-by">Philipp Biebert</p>
+      </div>
+    </footer>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

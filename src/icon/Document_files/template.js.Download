@@ -22,13 +22,9 @@ function templateCompanyHeader() {
 
 function templateCategory(i) {
   return `
-      <a href="#category-${company.menu[i].category}">
         <button type="button" class="categorie-button" aria-label="Button für die Kategorie ${company.menu[i].category}">
-          
             ${company.menu[i].category}
-    
         </button>
-      </a>
 `;
 }
 
@@ -41,7 +37,7 @@ function templateFoodCategoryContainer() {
 
 function templateFoodCategory(i) {
   return `
-    <section class="food-category" id='category-${company.menu[i].category}'>
+    <section class="food-category">
         <header class="food-category">
         <img src="src/img/${company.menu[i].food_category_img}" alt="Bild der Kategorie ${company.menu[i].category}" />  
         <div class="container">
@@ -112,12 +108,6 @@ function templateSumArea() {
               </tr>
             </tbody>
 
-            <button class="order-now" type="button" aria-label="Jetzt Bestellen" disabled  onclick ="klick()">Jetzt Bestellen</button>
+            <button class="order-now" type="button" aria-label="Jetzt Bestellen" disable=true>Jetzt Bestellen</button>
           </table>`;
-}
-
-function defaultCart() {
-  return `
-  <p class ='defaultCart'>Füge einen Artikel hinzu</p>
-  `;
 }

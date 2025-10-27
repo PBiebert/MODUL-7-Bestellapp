@@ -21,11 +21,6 @@
       transform: translateY(-10px);
       outline: 3px solid var(--color-button-border);
     }
-
-    /* & > a {
-      height: 100%;
-      width: 100%;
-    } */
   }
 }
 
@@ -108,11 +103,6 @@
       background: #555;
     }
 
-    & .defaultCart {
-      padding: var(--pd-m);
-      text-align: center;
-    }
-
     & .article {
       & > h3 {
         margin: var(--mg-m);
@@ -180,8 +170,7 @@
       }
 
       &:disabled {
-        background: var(--color-button-category);
-        cursor: not-allowed;
+        background: #555;
       }
     }
   }
