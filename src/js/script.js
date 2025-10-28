@@ -10,12 +10,14 @@ let cartSubCosts = 0;
 let totalCosts = company.delivery_costs;
 
 function renderPage() {
+  checkCartToLocaleStorage();
   clearPageContainer();
   createCompanyHeader();
   createFoodCategoryContainer();
   renderCategorys();
   renderSumArea();
   checkIfItemInCart();
+  renderCart();
 }
 
 function clearPageContainer() {
@@ -79,7 +81,9 @@ function addItemToCart(id) {
   } else {
     cart.push(creatCartObject());
   }
+  setCartToLocaleStorage();
   renderCart();
+  addItemAnimation();
 }
 
 function creatCartObject() {
@@ -105,12 +109,14 @@ function reduceItemToCart(id) {
       removeItemToCart(id);
     }
   }
+  setCartToLocaleStorage();
   renderCart();
 }
 
 function removeItemToCart(id) {
   let itemIndex = cart.findIndex((item) => item.id == id);
   cart.splice(itemIndex, 1);
+  setCartToLocaleStorage();
   renderCart();
 }
 
@@ -135,14 +141,68 @@ function checkIfItemInCart() {
   let button = document.querySelector(".order-now");
   let cartList = document.querySelector(".cart-list");
 
-  if (cartSubCosts <= company.minimum_order_value) {
+  if (cartSubCosts <= 0) {
     button.disabled = true;
     cartList.innerHTML = defaultCart();
-  } else {
+  } else if (cartSubCosts >= company.minimum_order_value) {
     button.disabled = false;
   }
 }
 
-function klick() {
-  console.log("geht");
+function setCartToLocaleStorage() {
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
+
+function getCartToLocaleStorage() {
+  return JSON.parse(localStorage.getItem("cart"));
+}
+
+function checkCartToLocaleStorage() {
+  const cartFromStorage = getCartToLocaleStorage();
+
+  if (cartFromStorage != null) {
+    cart = cartFromStorage;
+    console.log(cart);
+  } else {
+    cart = [];
+  }
+}
+
+function toggleMobileCart() {
+  document.querySelector(".cart").classList.toggle("open");
+  document.querySelector(".cart-overlay").classList.toggle("active");
+  document.querySelector("body").classList.toggle("overflow-hidden");
+}
+
+function openDialog() {
+  const dialog = document.querySelector("#order-confirmation");
+  dialog.showModal();
+  document.querySelector("body").classList.add("overflow-hidden");
+  setTimeout(() => closeDialog(), 5000);
+}
+
+function closeDialog() {
+  const dialog = document.querySelector("#order-confirmation");
+  dialog.close();
+  document.querySelector("body").classList.remove("overflow-hidden");
+  resetValues();
+  toggleMobileCart();
+}
+
+function resetValues() {
+  cart = [];
+  cartSubCosts = 0;
+  totalCosts = company.delivery_costs;
+  localStorage.clear();
+  renderPage();
+}
+
+function addItemAnimation() {
+  const cartButton = document.querySelector(".cart-button-mobile");
+  cartButton.classList.add("addAnimation");
+  setTimeout(() => cartButton.classList.remove("addAnimation"), 1000);
+}
+
+// Nr 1 Domm ist noch nicht da
+// nr 2 authorimage undefinde im array anerder key
+// nr 3 in show() wird kein parameter übergeben obwohl einer erwartet wird

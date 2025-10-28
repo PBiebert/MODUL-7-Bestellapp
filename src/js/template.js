@@ -112,7 +112,7 @@ function templateSumArea() {
               </tr>
             </tbody>
 
-            <button class="order-now" type="button" aria-label="Jetzt Bestellen" disabled  onclick ="klick()">Jetzt Bestellen</button>
+            <button class="order-now" type="button" aria-label="Jetzt Bestellen" disabled  onclick ="openDialog()">Jetzt Bestellen</button>
           </table>`;
 }
 

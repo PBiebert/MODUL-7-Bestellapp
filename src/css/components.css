@@ -81,7 +81,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  width: 275px;
+  width: 300px;
   box-shadow: -1px 0px 10px 0px #000000;
   z-index: 1;
 
@@ -183,6 +183,148 @@
         background: var(--color-button-category);
         cursor: not-allowed;
       }
+    }
+  }
+}
+
+.cart-overlay {
+  display: none;
+}
+
+.close {
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  font-size: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-primary);
+  margin: var(--mg-m);
+  padding: var(--pd-s);
+  background-color: transparent;
+}
+
+.cart-button-mobile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 15px;
+  height: 50px;
+  width: 50px;
+  padding: var(--pd-m);
+  margin: var(--mg-m);
+  border-radius: 50%;
+  right: 15px;
+  z-index: 3;
+  background: var(--color-button-add);
+  transition: all 125ms ease-in-out;
+  box-shadow: var(--shadow-heavy);
+
+  &:hover {
+    transform: scale(1.05);
+    border: 1px solid var(--color-button-border);
+  }
+
+  & > svg {
+    height: 24px;
+    width: 24px;
+    fill: var(--color-button-add);
+  }
+}
+
+& .addAnimation {
+  animation: addItem 1s ease-in-out;
+}
+
+@keyframes addItem {
+  0% {
+    rotate: 0;
+  }
+  33% {
+    rotate: 90deg;
+    scale: 1.2;
+  }
+  66% {
+    rotate: -90deg;
+  }
+  100% {
+    rotate: 0;
+    scale: 1;
+  }
+}
+
+dialog {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  min-width: 320px;
+  max-width: 90vw;
+  padding: var(--pd-xxl);
+  background: var(--color-bg-main);
+  box-shadow: var(--shadow-heavy);
+  text-align: center;
+
+  & > h2 {
+    padding-bottom: var(--pd-l);
+  }
+
+  & > p {
+    padding: var(--pd-s) 0;
+  }
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media (max-width: 750px) {
+  .cart {
+    display: none;
+    position: fixed;
+    top: 5%;
+    left: calc(50% - 150px);
+    right: 25%;
+    height: 90%;
+    flex-direction: column;
+    z-index: 3;
+    background-color: var(--color-bg-main);
+  }
+
+  .cart-button-mobile {
+    display: flex;
+  }
+
+  .cart-overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    z-index: 2;
+  }
+
+  .close {
+    display: flex;
+  }
+}
+
+@media (max-width: 500px) {
+  .cart {
+    top: 3%;
+    left: calc(50% - 150px);
+    right: 25%;
+    height: 94%;
+  }
+}
+
+@media (max-width: 460px) {
+  .food-card {
+    & .name {
+      margin: 0 40px var(--mg-xxl) 0;
     }
   }
 }

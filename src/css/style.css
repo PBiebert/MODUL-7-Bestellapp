@@ -51,3 +51,34 @@
     object-position: top;
   }
 }
+
+& .active {
+  display: initial;
+}
+
+& .open {
+  display: flex;
+}
+
+& .overflow-hidden {
+  overflow: hidden;
+}
+
+@media (max-width: 950px) {
+  .company-name {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  .food-category {
+    & h2 {
+      padding: var(--pd-m) 0;
+      margin: 0;
+    }
+
+    & img {
+      height: 7rem;
+    }
+  }
+}
