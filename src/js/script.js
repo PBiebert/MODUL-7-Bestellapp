@@ -202,7 +202,3 @@ function addItemAnimation() {
   cartButton.classList.add("addAnimation");
   setTimeout(() => cartButton.classList.remove("addAnimation"), 1000);
 }
-
-// Nr 1 Domm ist noch nicht da
-// nr 2 authorimage undefinde im array anerder key
-// nr 3 in show() wird kein parameter übergeben obwohl einer erwartet wird
