@@ -10,7 +10,7 @@ let cartSubCosts = 0;
 let totalCosts = company.delivery_costs;
 
 function renderPage() {
-  checkCartToLocaleStorage();
+  checkCartFromLocaleStorage();
   clearPageContainer();
   createCompanyHeader();
   createFoodCategoryContainer();
@@ -157,12 +157,11 @@ function getCartToLocaleStorage() {
   return JSON.parse(localStorage.getItem("cart"));
 }
 
-function checkCartToLocaleStorage() {
+function checkCartFromLocaleStorage() {
   const cartFromStorage = getCartToLocaleStorage();
 
   if (cartFromStorage != null) {
     cart = cartFromStorage;
-    console.log(cart);
   } else {
     cart = [];
   }
@@ -171,7 +170,6 @@ function checkCartToLocaleStorage() {
 function toggleMobileCart() {
   document.querySelector(".cart").classList.toggle("open");
   document.querySelector(".cart-overlay").classList.toggle("active");
-  document.querySelector("body").classList.toggle("overflow-hidden");
 }
 
 function openDialog() {
@@ -184,9 +182,9 @@ function openDialog() {
 function closeDialog() {
   const dialog = document.querySelector("#order-confirmation");
   dialog.close();
-  document.querySelector("body").classList.remove("overflow-hidden");
   resetValues();
   toggleMobileCart();
+  document.querySelector("body").classList.remove("overflow-hidden");
 }
 
 function resetValues() {

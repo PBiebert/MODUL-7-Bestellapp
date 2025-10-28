@@ -148,7 +148,7 @@
     position: relative;
     flex-direction: column;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
 
     & table {
       margin-top: var(--mg-l);
@@ -205,6 +205,10 @@
   margin: var(--mg-m);
   padding: var(--pd-s);
   background-color: transparent;
+}
+
+.closeDialog {
+  display: flex;
 }
 
 .cart-button-mobile {

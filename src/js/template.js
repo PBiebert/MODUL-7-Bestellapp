@@ -1,123 +1,139 @@
 function templateCompanyHeader() {
   return `
-        <header class="company-header">
-          <div class="header-banner">
-            <img src="src/img/${company.headder_img}" alt="Bild einer Pizza" />
-            <div class="logo">
-              <img src="src/icon/${company.icon}" alt="Logo von Pizza ABC" />
-            </div>
-          </div>
-
-          <div class="container">
-            <h1 class="company-name">${company.name}</h1>
-            <div class="reviews">
-              <p class="rating">Bewertung (${String(company.rating).replace(".", ",")} von 5 Sternen)</p>
-            </div>
-                <div class="categories" aria-labelledby="categorie-button">
-                </div> 
-          </div>
-        </header>
-    `;
+    <header class="company-header">
+      <div class="header-banner">
+        <img src="src/img/${company.headder_img}" alt="Bild einer Pizza" />
+        <div class="logo">
+          <img src="src/icon/${company.icon}" alt="Logo von Pizza ABC" />
+        </div>
+      </div>
+      <div class="container">
+        <h1 class="company-name">${company.name}</h1>
+        <div class="reviews">
+          <p class="rating">Bewertung (${String(company.rating).replace(".", ",")} von 5 Sternen)</p>
+        </div>
+        <div class="categories" aria-labelledby="categorie-button"></div>
+      </div>
+    </header>
+  `;
 }
 
 function templateCategory(i) {
   return `
-      <a href="#category-${company.menu[i].category}" tabindex="-1">
-        <button type="button" class="categorie-button" aria-label="Button für die Kategorie ${company.menu[i].category}">
-          
-            ${company.menu[i].category}
-    
-        </button>
-      </a>
-`;
+    <a href="#category-${company.menu[i].category}" tabindex="-1">
+      <button
+        type="button"
+        class="categorie-button"
+        aria-label="Button für die Kategorie ${company.menu[i].category}"
+      >
+        ${company.menu[i].category}
+      </button>
+    </a>
+  `;
 }
 
 function templateFoodCategoryContainer() {
   return `
-    <section class="food-category-container">
-
-    </section>; `;
+    <section class="food-category-container"></section>
+  `;
 }
 
 function templateFoodCategory(i) {
   return `
-    <section class="food-category" id='category-${company.menu[i].category}'>
-        <header class="food-category">
-        <img src="src/img/${company.menu[i].food_category_img}" alt="Bild der Kategorie ${company.menu[i].category}" />  
+    <section class="food-category" id="category-${company.menu[i].category}">
+      <header class="food-category">
+        <img src="src/img/${company.menu[i].food_category_img}" alt="Bild der Kategorie ${company.menu[i].category}" />
         <div class="container">
-            <h2>${company.menu[i].category}</h2>
+          <h2>${company.menu[i].category}</h2>
         </div>
-        </header>
-
-        <section class="food-list container"  id="${company.menu[i].category}">
-        </section>
-    </section>; `;
+      </header>
+      <section class="food-list container" id="${company.menu[i].category}"></section>
+    </section>
+  `;
 }
 
 function templateFoodListItem(i, j) {
   return `
     <div class="food-card">
-        <h3 class="name" id="${i}_${j}">
-        ${company.menu[i].items[j].name}
-        </h3>
-        <p class="topping">${company.menu[i].items[j].description}</p>
-        <p class="price">${company.menu[i].items[j].price.toFixed(2).replace(".", ",")} €</p>
-        <button
+      <h3 class="name" id="${i}_${j}">${company.menu[i].items[j].name}</h3>
+      <p class="topping">${company.menu[i].items[j].description}</p>
+      <p class="price">${company.menu[i].items[j].price.toFixed(2).replace(".", ",")} €</p>
+      <button
         type="button"
         class="add-button"
         aria-label="Artikel zum Warenkorb hinzufügen"
         onclick="addItemToCart('${i}_${j}')"
-        >
+      >
         <p>+</p>
-        </button>
-    </div>`;
+      </button>
+    </div>
+  `;
 }
 
 function templateCartArticle(i) {
   return `
-          <div class="article">
-            <h3>${cart[i].name}</h3>
-            <div class="amount-container">
-              <button class="add" type="button" aria-label="Artikel dieser Art hinzufügen" onclick ="addItemToCart('${
-                cart[i].id
-              }')">+</button>
-              <span class="amount">${cart[i].amount}x</span>
-              <button class="remove" type="button" aria-label="Artikel dieser Art entfernen" onclick="reduceItemToCart('${
-                cart[i].id
-              }')">-</button>
-              <span class="sum">${cart[i].sum.toFixed(2).replace(".", ",")} €</span>
-              <button class="delete" type="button" aria-label="Alle Artikel dieser art löschen" onclick="removeItemToCart('${
-                cart[i].id
-              }')">x</button>
-            </div>
-          </div>
-          `;
+    <div class="article">
+      <h3>${cart[i].name}</h3>
+      <div class="amount-container">
+        <button
+          class="add"
+          type="button"
+          aria-label="Artikel dieser Art hinzufügen"
+          onclick="addItemToCart('${cart[i].id}')"
+        >+</button>
+        <span class="amount">${cart[i].amount}x</span>
+        <button
+          class="remove"
+          type="button"
+          aria-label="Artikel dieser Art entfernen"
+          onclick="reduceItemToCart('${cart[i].id}')"
+        >-</button>
+        <span class="sum">${cart[i].sum.toFixed(2).replace(".", ",")} €</span>
+        <button
+          class="delete"
+          type="button"
+          aria-label="Alle Artikel dieser Art löschen"
+          onclick="removeItemToCart('${cart[i].id}')"
+        >x</button>
+      </div>
+    </div>
+  `;
 }
 
 function templateSumArea() {
   return `
-          <table>
-            <tbody>
-              <tr>
-                <td class="col-1">Zwischensumme:</td>
-                <td class="col-2" id="subtotal">${cartSubCosts.toFixed(2).replace(".", ",")} €</td>
-              </tr>
-              <tr>
-                <td class="col-1">Lieferkosten:</td>
-                <td class="col-2" id="delivery-costs">${company.delivery_costs.toFixed(2).replace(".", ",")} €</td>
-              </tr>
-              <tr>
-                <th class="col-1">Gesamt:</th>
-                <th class="col-2" id="total">${totalCosts.toFixed(2).replace(".", ",")} €</th>
-              </tr>
-            </tbody>
-
-            <button class="order-now" type="button" aria-label="Jetzt Bestellen" disabled  onclick ="openDialog()">Jetzt Bestellen</button>
-          </table>`;
+    <table>
+      <tbody>
+        <tr>
+          <td class="col-1">Zwischensumme:</td>
+          <td class="col-2" id="subtotal">${cartSubCosts.toFixed(2).replace(".", ",")} €</td>
+        </tr>
+        <tr>
+          <td class="col-1">Lieferkosten:</td>
+          <td class="col-2" id="delivery-costs">${company.delivery_costs.toFixed(2).replace(".", ",")} €</td>
+        </tr>
+        <tr>
+          <th class="col-1">Gesamt:</th>
+          <th class="col-2" id="total">${totalCosts.toFixed(2).replace(".", ",")} €</th>
+        </tr>
+      </tbody>
+    </table>
+    <button
+      class="order-now"
+      type="button"
+      aria-label="Jetzt Bestellen"
+      disabled
+      onclick="openDialog()"
+    >
+      Jetzt Bestellen
+    </button>
+  `;
 }
 
 function defaultCart() {
   return `
-  <p class ='defaultCart'>Mindestbestellwert : ${company.minimum_order_value.toFixed(2).replace(".", ",")} €</p>
+    <p class="defaultCart">
+      Mindestbestellwert: ${company.minimum_order_value.toFixed(2).replace(".", ",")} €
+    </p>
   `;
 }
